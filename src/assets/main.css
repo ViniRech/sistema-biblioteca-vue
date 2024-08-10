@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --vt-c-dark-blue: #023059;
+  --vt-c-light-blue: #348ABF;
+  --vt-c-gray: #D9D9D9;
+  --vt-c-black: #000;
+  --vt-c-white: #fff;
+  --vt-c-text-commom: "Inter", sans-serif; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--vt-c-text-commom);
+  text-decoration: none;
+}
