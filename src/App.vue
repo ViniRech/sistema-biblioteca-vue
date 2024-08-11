@@ -25,6 +25,13 @@ const searchType = ref(['Termo Livre', 'Título', 'Autor', 'Série', 'Gênero', 
       <select name="searchType" id="searchType">
         <option v-for="(type, index) in searchType" :key="index" :value="index">{{ type }}</option>
       </select>
+
+      <button class="cellphone-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+        </svg>
+        <p>PESQUISAR</p>
+      </button>
     </section>
   </main>
   
@@ -53,15 +60,23 @@ const searchType = ref(['Termo Livre', 'Título', 'Autor', 'Série', 'Gênero', 
     border-radius: 10px;
   }
 
-  .box-consultation div input {
-    padding: .5rem;
-    border: 2px solid var(--vt-c-black);
-    border-radius: 6px;
-    width: 70vw;
+  .box-consultation h3 {
+    display: grid;
+    align-content: center;
+  }
+
+  .box-consultation div {
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+    width: 100%;
   }
 
   .box-consultation div input {
-    border-color: var(--vt-c-light-blue);
+    padding: .5rem;
+    border: 1px solid var(--vt-c-light-blue);
+    border-radius: 6px;
+    min-width: 70%;
+    font-size: 1rem;
   }
 
   .box-consultation div button {
@@ -71,6 +86,58 @@ const searchType = ref(['Termo Livre', 'Título', 'Autor', 'Série', 'Gênero', 
     background-color: var(--vt-c-light-blue);
     color: var(--vt-c-white);
     width: 2.5rem;
-    margin-left: .5rem;
+    margin-left: 1rem;
+  }
+
+  .box-consultation div button:hover {
+    background-color: var(--vt-c-dark-blue);
+  }
+
+  .box-consultation div button:active {
+    background-color: var(--vt-c-black);
+  }
+
+  .box-consultation select {
+    padding: .5rem;
+    height: fit-content;
+    border: 1px solid var(--vt-c-light-blue);
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+
+  .cellphone-search {
+    display: none;
+    justify-content: center;
+    column-gap: .5rem;
+    min-width: 100%;
+    padding: .5rem;
+    height: fit-content;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: var(--vt-c-light-blue);
+    color: var(--vt-c-white);
+  }
+
+  @media (max-width: 450px) {
+    .box-consultation {
+      padding: 1.5rem 2rem;
+    }
+
+    .box-consultation div {
+      grid-template-columns: 1fr;
+    }
+
+    .box-consultation div button {
+      display: none;
+    }
+
+    .box-consultation select {
+      min-width: 100%;
+    }
+
+    .cellphone-search {
+      display: flex;
+    }
   }
 </style>
