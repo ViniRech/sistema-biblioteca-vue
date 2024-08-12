@@ -24,7 +24,7 @@ const confirmPassword = ref('');
             </div>
             <div>
                 <label for="cpf">CPF:</label>
-                <input type="text" name="cpf" id="cpf" v-model="familyMember.cpf">
+                <input type="text" name="cpf" id="cpf" placeholder="999.999.999-99" v-model="familyMember.cpf">
             </div>
             <div>
                 <label for="rg">RG:</label>
@@ -55,5 +55,30 @@ const confirmPassword = ref('');
 </template>
 
 <style scoped>
-    
+    .family-member-form {
+        display: grid;
+        row-gap: 2rem;
+        justify-content: center;
+        padding: 5rem 1rem;
+    }
+
+    .family-member-form h1 {
+        text-align: center;
+    }
+
+    .form div {
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+        align-items: center;
+        column-gap: 1rem;
+        padding: 1rem;
+    }
+
+    .form div input {
+        padding: .5rem;
+        background-color: var(--vt-c-transparent);
+        border: 1px solid var(--vt-c-black);
+        border-radius: 6px;
+        font-size: 1rem;
+    }
 </style>
