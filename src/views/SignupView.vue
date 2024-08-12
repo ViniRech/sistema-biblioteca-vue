@@ -6,14 +6,16 @@
         <h2>Quem é você?</h2>
         <section class="box-select-user">
             <div>
-                <router-link to="/signup/family-member">
+                <router-link to="/signup/family-member" exact>
                     <h3>Familiar</h3>
                     <img src="../img/garoto.png" alt="Familiar"> 
                 </router-link>
             </div>
             <div>
-                <h3>Resposável</h3>
-                <img src="../img/pai-e-filho.png" alt="Responsável">
+                <router-link to="/signup/guardian" exact>
+                    <h3>Resposável</h3>
+                    <img src="../img/pai-e-filho.png" alt="Responsável">
+                </router-link>
             </div>
             <div>
                 <h3>Funcionário</h3>
