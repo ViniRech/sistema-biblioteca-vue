@@ -5,7 +5,7 @@ const familyMember = reactive({
     socialName: '',
     cpf: '',
     rg: '',
-    birthday: '',
+    dateOfBirth: '',
     email: '',
     userName: '',
     password: '',
@@ -31,8 +31,8 @@ const confirmPassword = ref('');
                 <input type="text" name="rg" id="rg" v-model="familyMember.rg">
             </div>
             <div>
-                <label for="birthday">Data de nascimento:</label>
-                <input type="date" name="birthday" id="birthday" v-model="familyMember.birthday">
+                <label for="dateOfBirth">Data de nascimento:</label>
+                <input type="date" name="dateOfBirth" id="dateOfBirth" v-model="familyMember.dateOfBirth">
             </div>
             <div>
                 <label for="email">E-mail:</label>
