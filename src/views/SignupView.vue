@@ -18,8 +18,10 @@
                 </router-link>
             </div>
             <div>
-                <h3>Funcionário</h3>
-                <img src="../img/bibliotecario.png" alt="Funcionário">
+                <a>
+                    <h3>Funcionário</h3>
+                    <img src="../img/bibliotecario.png" alt="Funcionário">
+                </a>
             </div>
         </section>
     </main>
@@ -32,6 +34,7 @@
         row-gap: 2rem;
         justify-content: center;
         text-align: center;
+        min-height: 75vh;
         padding: 5rem;
     }
 
@@ -39,9 +42,12 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 1rem;
+
     }
 
     .box-select-user div {
+        display: grid;
+        align-content: center;
         background-color: var(--vt-c-gray);
         padding: 1rem 3rem;
         border-radius: 7px;

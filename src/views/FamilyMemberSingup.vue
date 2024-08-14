@@ -1,4 +1,5 @@
 <script setup>
+import BtnSend from '../components/BtnSend.vue';
 import { ref, reactive } from 'vue';
 
 const familyMember = reactive({
@@ -17,6 +18,7 @@ const confirmPassword = ref('');
 <template>
     <main class="family-member-form">
         <h1>Cadastro do Familiar</h1>
+
         <form class="form">
             <div>
                 <label for="social-name">Nome social:</label>
@@ -51,6 +53,8 @@ const confirmPassword = ref('');
                 <input type="password" name="confirmPassword" id="confirmPassword" v-model="confirmPassword">
             </div>
         </form>
+
+        <BtnSend />
     </main>
 </template>
 
@@ -59,11 +63,8 @@ const confirmPassword = ref('');
         display: grid;
         row-gap: 2rem;
         justify-content: center;
+        justify-items: center;
         padding: 5rem 1rem;
-    }
-
-    .family-member-form h1 {
-        text-align: center;
     }
 
     .form div {
@@ -80,5 +81,19 @@ const confirmPassword = ref('');
         border: 1px solid var(--vt-c-black);
         border-radius: 6px;
         font-size: 1rem;
+    }
+
+    @media (max-width: 385px) {
+        .family-member-form {
+            padding: 5rem 0;
+        }
+
+        .family-member-form h1 {
+            font-size: 1.5rem;
+        }
+
+        .form div input {
+            font-size: .5rem;
+        }
     }
 </style>

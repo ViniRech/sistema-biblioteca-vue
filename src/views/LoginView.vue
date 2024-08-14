@@ -26,6 +26,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 5rem 2rem;
+        justify-items: center;
+        align-items: center;
     }
 
     .login-section {
@@ -36,6 +38,7 @@
         color: var(--vt-c-white);
         background-color: var(--vt-c-dark-blue);
         border-radius: 15px;
+        padding: 3rem;
     }
 
     .login-section h2, .login-section div p {
@@ -54,6 +57,7 @@
         background-color: var(--vt-c-transparent);
         color: var(--vt-c-white);
         border-radius: 6px;
+        width: 20vw;
     }
 
     .login-section div input:focus {
@@ -77,14 +81,20 @@
         .login-section {
             background-color: var(--vt-c-transparent);
             color: var(--vt-c-dark-blue);
+            padding: 0;
         }
 
         .login-section div input {
             border-color: var(--vt-c-dark-blue);
+            width: auto;
         }
 
         .login-section div input:focus {
             border-color: var(--vt-c-dark-blue);
+        }
+
+        .login-section div p a {
+            color: var(--vt-c-dark-blue);
         }
     }
 </style>

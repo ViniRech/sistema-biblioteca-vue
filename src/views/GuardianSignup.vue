@@ -1,4 +1,5 @@
 <script setup>
+import BtnSend from '../components/BtnSend.vue';
 import { ref, reactive } from 'vue';
 
 const numberFamilyMember = ref(0);
@@ -110,7 +111,7 @@ const guardian = reactive({
             </form>
         </section>
         
-        <button class="btn">ENVIAR</button>
+        <BtnSend />
     </main>
 </template>
 
@@ -153,23 +154,5 @@ const guardian = reactive({
         border: 1px solid var(--vt-c-black);
         border-radius: 6px;
         font-size: 1rem;
-    }
-
-    .btn {
-        background-color: var(--vt-c-dark-gray);
-        border: none;
-        border-radius: 6px;
-        padding: 1rem 2rem;
-        font-size: 1rem
-    }
-
-    .btn:hover {
-        color: var(--vt-c-white);
-        background-color: var(--vt-c-dark-blue);
-    }
-
-    .btn:active {
-        color: var(--vt-c-white);
-        background-color: var(--vt-c-black);
     }
 </style>

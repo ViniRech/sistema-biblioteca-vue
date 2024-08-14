@@ -70,7 +70,7 @@
     }
 
     @media (max-width: 522px) {
-        header h1 {
+        header h1 a {
             font-size: 1.5rem;
         }
 
@@ -83,7 +83,11 @@
         }
     }
 
-    @media (max-width: 415px) {
+    @media (max-width: 480px) {
+        header {
+            padding: 1rem;
+        }
+
         header h1 {
             font-size: 1rem;
         }

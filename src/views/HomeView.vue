@@ -40,6 +40,7 @@ const searchType = ref(['Termo Livre', 'Título', 'Autor', 'Série', 'Gênero', 
     display: grid;
     justify-content: center;
     align-items: center;
+    min-height: 75vh;
     background-image: url(../img/books.png);
     background-size: cover;
     padding: 5rem 4rem;
