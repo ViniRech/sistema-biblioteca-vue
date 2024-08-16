@@ -13,6 +13,7 @@
                 <label for="user-password">Senha:</label>
                 <input type="password" name="user-password" id="user-password">
             </div>
+            <button>ENTRAR</button>
             <div>
                 <p><a>Esqueceu a senha?</a></p>
                 <p><router-link to="/signup" exact>Fazer o cadastro</router-link></p>
@@ -65,6 +66,25 @@
         border: 2px solid;
     }
 
+    .login-section button {
+        padding: .5rem;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        background-color: var(--vt-c-white);
+        color: var(--vt-c-black);
+    }
+
+    .login-section button:hover {
+        background-color: var(--vt-c-light-blue);
+        color: var(--vt-c-white);
+    }
+    
+    .login-section button:active {
+        background-color: var(--vt-c-black);
+        color: var(--vt-c-white);
+    }
+
     .login-section div p a {
         color: var(--vt-c-white);
     }
@@ -91,6 +111,11 @@
 
         .login-section div input:focus {
             border-color: var(--vt-c-dark-blue);
+        }
+
+        .login-section button {
+            background-color: var(--vt-c-light-blue);
+            color: var(--vt-c-white);
         }
 
         .login-section div p a {
