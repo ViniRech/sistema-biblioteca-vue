@@ -2,10 +2,10 @@
 <template>
     <footer class="footer">
         <section class="footer-description">
-            <h1><router-link to="/" exact>NOME BIBLIOTECA</router-link></h1>
+            <h1><router-link to="/" exact>BIBLIOTECH</router-link></h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Nosso objetivo é facilitar a conexão entre pessoas e conhecimento, 
+                trazendo a biblioteca para a palma da mão.
             </p>
         </section>
 

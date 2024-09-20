@@ -2,7 +2,7 @@
 
 <template>
     <header>
-        <h1><router-link to="/" exact>NOME BIBLIOTECA</router-link></h1>
+        <h1><router-link to="/" exact>BIBLIOTECH</router-link></h1>
     
         <div>
             <router-link class="login" to="/login" exact>
