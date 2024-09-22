@@ -92,6 +92,10 @@ const confirmPassword = ref('');
             font-size: 1.5rem;
         }
 
+        .form div label {
+            font-size: .8rem;
+        }
+
         .form div input {
             font-size: .5rem;
         }

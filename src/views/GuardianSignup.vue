@@ -83,7 +83,7 @@ const guardian = reactive({
                     <input type="text" name="guardian-rg" id="guardian-rg" v-model="guardian.rg">
                 </div>
                 <div>
-                    <label for="guardian-date-of-birth">Data de nascimento:</label>
+                    <label for="guardian-date-of-birth">Nascimento:</label>
                     <input type="date" name="guardian-date-of-birth" id="guardian-date-of-birth" v-model="guardian.dateOfBirth">
                 </div>
                 <div>
@@ -91,7 +91,7 @@ const guardian = reactive({
                     <input type="email" name="guardian-email" id="guardian-email" v-model="guardian.email">
                 </div>
                 <div>
-                    <label for="guardian-kinship">Grau de parentesco:</label>
+                    <label for="guardian-kinship">Parentesco:</label>
                     <select name="guardian-kinship" id="guardian-kinship">
                         <option v-for="(kinship, index) in kinshipOptions" :key="index" :value="index">{{ kinship }}</option>
                     </select>
@@ -131,13 +131,16 @@ const guardian = reactive({
     .number-people {
         display: grid;
         grid-template-columns: auto auto;
+        gap: .5rem;
         align-items: center;
+        padding: 1rem;
         width: 100%;
     }
 
     .form-section {
         display: grid;
         row-gap: 2rem;
+        padding: 1rem;
     }
 
     .form div {
@@ -154,5 +157,27 @@ const guardian = reactive({
         border: 1px solid var(--vt-c-black);
         border-radius: 6px;
         font-size: 1rem;
+    }
+
+    @media (max-width: 385px) {
+        .guardian-form-page {
+            padding: 5rem 0;
+        }
+
+        .guardian-form-page h1 {
+            font-size: 1.5rem;
+        }
+
+        .number-people {
+            grid-template-columns: 1fr;
+        }
+
+        .form div label {
+            font-size: .8rem;
+        }
+
+        .form div input, .form div select {
+            font-size: .5rem;
+        }
     }
 </style>
